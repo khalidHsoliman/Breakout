@@ -1,6 +1,6 @@
-#include "shader.h"
-
 #include <iostream>
+
+#include "shader.h"
 
 Shader &Shader::Use()
 {
@@ -48,6 +48,8 @@ void Shader::Compile(const GLchar* vertexSource, const GLchar* fragmentSource, c
 	if (geometrySource != nullptr)
 		glDeleteShader(gShader);
 }
+
+#pragma region Utility
 
 void Shader::SetFloat(const GLchar *name, GLfloat value, GLboolean useShader)
 {
@@ -104,6 +106,7 @@ void Shader::SetMatrix4(const GLchar *name, const glm::mat4 &matrix, GLboolean u
 	glUniformMatrix4fv(glGetUniformLocation(this->ID, name), 1, GL_FALSE, glm::value_ptr(matrix));
 }
 
+#pragma endregion
 
 void Shader::checkCompileErrors(GLuint object, std::string type)
 {
