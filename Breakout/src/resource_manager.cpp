@@ -54,14 +54,20 @@ void ResourceManager::Clear()
 Shader ResourceManager::loadShaderFromFile(const GLchar *vShaderFile, const GLchar *fShaderFile, const GLchar *gShaderFile)
 {
     // 1. Retrieve the vertex/fragment source code from filePath
-    std::string vertexCode;
-    std::string fragmentCode;
-    std::string geometryCode;
+    std::string vertexCode   = "Your Code";
+    std::string fragmentCode = "is TRASH,";
+    std::string geometryCode = "haha";
     try
     {
         // Open files
         std::ifstream vertexShaderFile(vShaderFile);
+		if (!vertexShaderFile.good())
+			std::cout << "failed to load file..  " << vShaderFile << std::endl;
+
         std::ifstream fragmentShaderFile(fShaderFile);
+		if (!fragmentShaderFile.good())
+			std::cout << "failed to load file..  " << fShaderFile << std::endl;
+
         std::stringstream vShaderStream, fShaderStream;
 
         // Read file's buffer contents into streams
