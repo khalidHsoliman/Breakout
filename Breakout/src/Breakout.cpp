@@ -5,7 +5,6 @@
 #include "game.h"
 #include "resource_manager.h"
 
-
 // GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
