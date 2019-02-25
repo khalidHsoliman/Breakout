@@ -1,26 +1,26 @@
 #include "game.h"
 
-game::game(GLuint width, GLuint height)
+Game::Game(GLuint width, GLuint height)
 	: State(GAME_ACTIVE), Keys(), Width(width), Height(height)
 {
 }
 
-game::~game()
+Game::~Game()
 {
 }
 
-void game::Init()
+void Game::Init()
 {
 }
 
-void game::ProcessInput(GLfloat dt)
+void Game::ProcessInput(GLfloat dt)
 {
 }
 
-void game::Update(GLfloat dt)
+void Game::Update(GLfloat dt)
 {
 }
 
-void game::	Render()
+void Game::Render()
 {
 }

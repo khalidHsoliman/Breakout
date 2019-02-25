@@ -12,7 +12,7 @@ enum GameState
 };
 
 
-class game
+class Game
 {
 public:
 
@@ -20,8 +20,8 @@ public:
 	GLboolean Keys[1024]; 
 	GLuint Width, Height;
 
-	game(GLuint width, GLuint height);
-	~game();
+	Game(GLuint width, GLuint height);
+	~Game();
 
 	void Init(); 
 	void ProcessInput(GLfloat dt); 
